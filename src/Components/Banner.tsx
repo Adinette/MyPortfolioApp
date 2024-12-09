@@ -1,51 +1,29 @@
+import images from "@/assets/images";
+import Image from "next/image";
+
 export default function Banner() {
   return (
-    <div className="">
-      <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-        <div className="relative isolate overflow-hidden px-6 pt-16 sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
-          <svg
-            viewBox="0 0 1024 1024"
-            aria-hidden="true"
-            className="absolute left-1/2 top-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
-          >
-            <circle
-              r={512}
-              cx={512}
-              cy={512}
-              fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
-              fillOpacity="0.7"
-            />
-            <defs>
-              <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
-                <stop stopColor="#7775D6" />
-                <stop offset={1} stopColor="#E935C1" />
-              </radialGradient>
-            </defs>
-          </svg>
-          <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-            <h2 className="text-balance text-xl font-semibold tracking-tight text-white sm:text-4xl">
-              Boost your productivity.
-            </h2>
-            <h1 className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-4xl">
-              {" "}
-              Start using our app today
-            </h1>
-            <p className="mt-6 text-pretty text-lg/8 text-gray-300">
-              Ac euismod vel sit maecenas id pellentesque eu sed consectetur.
-              Malesuada adipiscing sagittis vel nulla.
-            </p>
-          </div>
-          <div className="relative mt-16 h-80 lg:mt-8">
-            <img
-              alt="App screenshot"
-              src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
-              width={1824}
-              height={1080}
-              className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
-            />
-          </div>
+      <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row">
+        <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+          <h3 className="mt-6 mb-8 text-2xl sm:mb-12">
+            FRONT-END WEB DEVELOPPER
+          </h3>
+          <h1 className="text-5xl font-bold leading-none sm:text-6xl">
+            Adinette DOUGLOUI
+          </h1>
+          <p className="border-l-4 border-l-solid border-l-gray-400 pl-5 mt-6 mb-8 text-lg sm:mb-12">
+            I'm a front-end web developper Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Voluptatum eius assumenda aperiam amet
+            distinctio doloribus quis.
+          </p>
+        </div>
+        <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+          <Image
+            src={images.Business_SVG}
+            alt=""
+            className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+          />
         </div>
       </div>
-    </div>
   );
 }

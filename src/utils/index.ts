@@ -1,23 +1,26 @@
 const items = [
     {
       id: 1,
-      name: "Home",
-      href: "#",
+      name: "About",
+      href: "#about",
     },
     {
       id: 2,
-      name: "About",
-      href: "#",
+      name: "Projects",
+      href: "#projects",
     },
     {
       id: 3,
-      name: "Services",
-      href: "#",
+      name: "Blog",
+      href: "#blog",
     },
     {
       id: 4,
       name: "Contact",
-      href: "#",
+      href: "#contact",
     },
 ]
-export default items;
+
+
+
+export default { items };

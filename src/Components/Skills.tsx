@@ -1,89 +1,47 @@
+import images from "@/assets/images";
+import skills from "@/utils/index";
+import Image from "next/image";
+
 export default function Skills() {
+  const skills = [
+    { id: 1, name: "HTML", dots: 8 },
+    { id: 2, name: "CSS", dots: 8 },
+    { id: 3, name: "JavaScript", dots: 6 },
+    { id: 4, name: "React", dots: 6 },
+    { id: 5, name: "Next.js", dots: 6 },
+    { id: 6, name: "Tailwind CSS", dots: 5 },
+    { id: 6, name: "Bootstrap", dots: 7 },
+    { id: 7, name: "Git", dots: 6 },
+  ];
   return (
-    <div className="">
-      <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-        <h2 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          My Skills
-        </h2>
-        <div className="grid grid-cols-2 gap-4 mx-auto text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-          <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
-            <li className="flex items-center">
-              <svg
-                className="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-              </svg>
-              At least 10 characters
-            </li>
-            <li className="flex items-center">
-              <svg
-                className="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-              </svg>
-              At least one lowercase character
-            </li>
-            <li className="flex items-center">
-              <svg
-                className="w-3.5 h-3.5 me-2 text-gray-500 dark:text-gray-400 flex-shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-              </svg>
-              At least one special character, e.g., ! @ # ?
-            </li>
-          </ul>
-          <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
-            <li className="flex items-center">
-              <svg
-                className="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-              </svg>
-              At least 10 characters
-            </li>
-            <li className="flex items-center">
-              <svg
-                className="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-              </svg>
-              At least one lowercase character
-            </li>
-            <li className="flex items-center">
-              <svg
-                className="w-3.5 h-3.5 me-2 text-gray-500 dark:text-gray-400 flex-shrink-0"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-              </svg>
-              At least one special character, e.g., ! @ # ?
-            </li>
-          </ul>
+    <section className="p-6">
+      <div className="container max-w-5xl	 p-4 mx-auto text-center">
+        <div className="grid grid-cols-2 items-center p-4 space-x-4 md:space-x-6 dark:text-gray-50">
+          <h2 className="text-7xl font-bold leading-none text-start sm:text-7xl">
+            My Skills
+          </h2>
+          <div>
+            <Image src={images.left_arrow} alt="left_arrow" />
+          </div>
         </div>
       </div>
-    </div>
+      <div className="container max-w-5xl grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-2">
+        {skills.map((item: any) => (
+          <div
+            key={item.id}
+            className="flex space-x-4 rounded-lg md:space-x-6 dark:text-gray-50"
+          >
+            <div className="flex flex-col justify-center align-middle">
+              <p className="text-3xl font-semibold leading-none">{item.name}</p>
+            </div>
+            <div className="flex justify-center align-middle rounded-lg">
+              {[...Array(item.dots)].map(() => (
+                <Image src={images.dot} alt="dot" />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
