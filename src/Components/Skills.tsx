@@ -4,41 +4,36 @@ import Image from "next/image";
 
 export default function Skills() {
   const skills = [
-    { id: 1, name: "HTML", dots: 8 },
-    { id: 2, name: "CSS", dots: 8 },
-    { id: 3, name: "JavaScript", dots: 6 },
-    { id: 4, name: "React", dots: 6 },
-    { id: 5, name: "Next.js", dots: 6 },
-    { id: 6, name: "Tailwind CSS", dots: 5 },
-    { id: 6, name: "Bootstrap", dots: 7 },
-    { id: 7, name: "Git", dots: 6 },
+    { id: 1, img: images.html },
+    { id: 2, img: images.css },
+    { id: 3, img: images.javascript },
+    { id: 4, img: images.reatjs },
+    { id: 5, img: images.nextjs },
+    { id: 6, img: images.vuejs },
+    { id: 7, img: images.nuxtjs },
+    { id: 8, img: images.tailwindcss },
+    { id: 9, img: images.bootstrap },
+    { id: 10, img: images.sass },
+    { id: 11, img: images.github },
+    { id: 12, img: images.gitlab },
+    { id: 13, img: images.bitbucket },
+    { id: 14, img: images.jira },
+    { id: 15, img: images.aws },
+    { id: 16, img: images.ionic },
+    { id: 17, img: images.vscode },
+    { id: 17, img: images.swagger },
   ];
   return (
     <section className="p-6">
-      <div className="container max-w-5xl	 p-4 mx-auto text-center">
-        <div className="grid grid-cols-2 items-center p-4 space-x-4 md:space-x-6 dark:text-gray-50">
-          <h2 className="text-7xl font-bold leading-none text-start sm:text-7xl">
-            My Skills
-          </h2>
-          <div>
-            <Image src={images.left_arrow} alt="left_arrow" />
-          </div>
-        </div>
+      <div className="container max-w-5xl p-4 mx-auto text-center">
+        <h2 className="text-7xl font-bold leading-none  sm:text-7xl">
+          My Skills
+        </h2>
       </div>
-      <div className="container max-w-5xl grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-2">
+      <div className="container mt-8 max-w-5xl flex flex-wrap justify-center mx-auto dark:text-gray-600">
         {skills.map((item: any) => (
-          <div
-            key={item.id}
-            className="flex space-x-4 rounded-lg md:space-x-6 dark:text-gray-50"
-          >
-            <div className="flex flex-col justify-center align-middle">
-              <p className="text-3xl font-semibold leading-none">{item.name}</p>
-            </div>
-            <div className="flex justify-center align-middle rounded-lg">
-              {[...Array(item.dots)].map(() => (
-                <Image src={images.dot} alt="dot" />
-              ))}
-            </div>
+          <div className="flex justify-center w-1/2 p-6 align-middle md:w-1/3 xl:w-1/4">
+            <Image src={item.img} alt="dot" />
           </div>
         ))}
       </div>

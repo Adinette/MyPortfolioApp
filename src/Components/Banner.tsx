@@ -5,7 +5,7 @@ export default function Banner() {
   return (
       <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row">
         <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-          <h3 className="mt-6 mb-8 text-2xl sm:mb-12">
+          <h3 className="mt-7 mb-6 text-2xl font-semibold sm:mb-6">
             FRONT-END WEB DEVELOPPER
           </h3>
           <h1 className="text-5xl font-bold leading-none sm:text-6xl">

@@ -16,15 +16,15 @@ export default function Footer() {
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
             {items.items.map((item) => (
               <li key={item.id}>
-                <a href={item.href} className="hover:underline me-4 md:me-6">
+                <a href={item.href} className="text-xl text-white font-semibold hover:underline me-4 md:me-6">
                   {item.name}
                 </a>
               </li>
             ))}
           </ul>
         </div>
-        <div className="flex justify-between items-center">
-        <span className="text-sm text-gray-500 dark:text-gray-400">
+        <div className="flex mt-6 justify-between items-center">
+        <span className="text-lg text-gray-500 dark:text-gray-400">
           © 2023
           <a href="https://flowbite.com/" className="hover:underline">
             Flowbite™
@@ -33,12 +33,12 @@ export default function Footer() {
         </span>
         <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
           <li>
-            <a href="#" className="hover:underline me-4 md:me-6">
+            <a href="#" className="text-xl text-white font-semibold hover:underline me-4 md:me-6">
               Term of use
             </a>
           </li>
           <li>
-            <a href="#" className="hover:underline me-4 md:me-6">
+            <a href="#" className=" text-xl text-white font-semibold hover:underline me-4 md:me-6">
               Privacy policy
             </a>
           </li>
