@@ -6,53 +6,73 @@ export interface Item {
 }
 
 export const items: Item[] = [
-  { id: 1, name: "Accueil", href: "/" },
-  { id: 2, name: "À propos", href: "/about" },
-  { id: 3, name: "Contact", href: "/contact" }
+  { id: 1, name: "About", href: "#about" },
+  { id: 2, name: "My skills", href: "#skills" },
+  { id: 3, name: "My projects", href: "#projects" },
+  { id: 4, name: "Contact", href: "#contact" }
 ];
 ---
 
+<section class="p-6">
+  <div
+    class="container max-w-5xl grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-2"
+  >
+    <div>
+      <h2 class="text-7xl font-bold leading-none sm:text-8xl">Follow me</h2>
+      <div class="flex">
+        {[...Array(8)].map(() => <img src="src/assets/dot.svg" alt="dot" />)}
+      </div>
+    </div>
+    <div
+      class="container max-w-4xl grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-4"
+    >
+      <div
+        class="flex justify-center items-center align-middle rounded-full bg-fuchsia-600"
+      >
+        <img src="src/assets/linkedin.svg" alt="linkedin" />
+      </div>
+      <div
+        class="flex justify-center items-center align-middle rounded-full bg-fuchsia-600"
+      >
+        <img src="src/assets/instagram.svg" alt="instagram" />
+      </div>
+      <div
+        class="flex justify-center items-center align-middle rounded-full bg-fuchsia-600"
+      >
+        <img src="src/assets/facebook.svg" alt="facebook" />
+      </div>
+      <div
+        class="flex justify-center items-center align-middle rounded-full bg-fuchsia-600"
+      >
+        <img src="src/assets/git.svg" alt="git" />
+      </div>
+    </div>
+  </div>
+</section>
 <footer class="rounded-lg shadow m-4">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-      <div class="sm:flex sm:items-center sm:justify-between">
-        <a
-          href="https://flowbite.com/"
-          class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
-        >
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Flowbite
-          </span>
-        </a>
-        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-          {items.map((item) => (
+  <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <span class="text-lg text-gray-500 dark:text-gray-400">
+        © 2023
+        <a href="https://flowbite.com/" class="hover:underline"> Flowbite™ </a>
+        . All Rights Reserved.
+      </span>
+      <ul
+        class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
+      >
+        {
+          items.map((item) => (
             <li>
-              <a href={item.href} class="text-xl text-white font-semibold hover:underline me-4 md:me-6">
+              <a
+                href={item.href}
+                class="text-xl text-white font-semibold hover:underline me-4 md:me-6"
+              >
                 {item.name}
               </a>
             </li>
-          ))}
-        </ul>
-      </div>
-      <div class="flex mt-6 justify-between items-center">
-      <span class="text-lg text-gray-500 dark:text-gray-400">
-        © 2023
-        <a href="https://flowbite.com/" class="hover:underline">
-          Flowbite™
-        </a>
-        . All Rights Reserved.
-      </span>
-      <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-        <li>
-          <a href="#" class="text-xl text-white font-semibold hover:underline me-4 md:me-6">
-            Term of use
-          </a>
-        </li>
-        <li>
-          <a href="#" class=" text-xl text-white font-semibold hover:underline me-4 md:me-6">
-            Privacy policy
-          </a>
-        </li>
+          ))
+        }
       </ul>
-      </div>
     </div>
-  </footer>
+  </div>
+</footer>
