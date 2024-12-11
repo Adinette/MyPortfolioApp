@@ -1,0 +1,25 @@
+<section class="p-6">
+    <div class="container max-w-5xl grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-2">
+      <div>
+      <h2 class="text-8xl font-bold leading-none sm:text-8xl">
+        Follow me
+      </h2>
+      <div class="flex">
+      {[...Array(8)].map(() => (
+        <img src="src/assets/dot.svg" alt="dot" />
+      ))}
+    </div>
+      </div>
+      <div class="container max-w-md grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-3">
+        <div class="flex justify-center items-center align-middle rounded-full bg-fuchsia-600">
+        <img src="src/assets/linkedin.svg" alt="linkedin" />
+        </div>
+        <div class="flex justify-center items-center align-middle rounded-full bg-fuchsia-600">
+        <img src="src/assets/instagram.svg"alt="instagram" />
+        </div>
+        <div class="flex justify-center items-center align-middle rounded-full bg-fuchsia-600">
+        <img src="src/assets/facebook.svg" alt="facebook" />
+        </div>
+      </div>
+    </div>
+  </section>

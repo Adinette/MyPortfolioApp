@@ -1,0 +1,74 @@
+---
+export interface Item {
+  id: number;
+  name:string;
+  img: string;
+  date:string;
+  description:string;
+}
+
+export const project: Item[] = [
+    {
+      id: 1,
+      name: "Project Name 1",
+      img: "src/assets/Business_SVG.svg",
+      date: "Date 2021",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Repellat, excepturi. Lorem ipsum dolor sit amet consectetur,adipisicing elit. Repellat, excepturi."
+    },
+    {
+      id: 2,
+      name: "Project Name 2",
+      img: "src/assets/Business_SVG.svg",
+      date: "Date 2022",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Repellat, excepturi. Lorem ipsum dolor sit amet consectetur,adipisicing elit. Repellat, excepturi."
+    },
+    {
+      id: 3,
+      name: "Project Name 3",
+      img: "src/assets/Business_SVG.svg",
+      date: "Date 2023",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Repellat, excepturi. Lorem ipsum dolor sit amet consectetur,adipisicing elit. Repellat, excepturi."
+    },
+    {
+      id: 4,
+      name: "Project Name 4",
+      img: "src/assets/Business_SVG.svg",
+      date: "Date 2024",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Repellat, excepturi. Lorem ipsum dolor sit amet consectetur,adipisicing elit. Repellat, excepturi."
+    },
+  ];
+---
+
+<section class="p-6" id="projects">
+    <div class="container max-w-5xl p-4 mx-auto text-center">
+      <h2 class="text-7xl font-bold leading-none sm:text-7xl">
+        My Projects
+      </h2>
+    </div>
+    <div class="container mt-8 max-w-5xl mx-auto">
+      <div class="grid grid-cols-2 gap-6">
+        {project.map((item) => (
+        <div class="bg-gray-950 p-8">
+            <div class="space-y-2">
+              <img
+                src={item.img}
+                alt=""
+                class="object-contain w-full h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+              />
+            </div>
+            <div class="space-y-2">
+              <div class="flex items-center text-xs">
+                <span class="text-xl font-medium mt-4">{item.date}</span>
+              </div>
+              <a href="#" class="block">
+                <h3 class="text-3xl font-semibold my-6 dark:text-white">
+                {item.name}
+               </h3>
+              </a>
+              <p class="leading-snug text-lg dark:text-gray-400">{item.description}</p>
+            </div>
+         </div>
+          ))}
+      </div>
+    </div>
+  </section>

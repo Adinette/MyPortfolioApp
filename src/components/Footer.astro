@@ -1,0 +1,58 @@
+---
+export interface Item {
+  id: number;
+  name: string;
+  href: string;
+}
+
+export const items: Item[] = [
+  { id: 1, name: "Accueil", href: "/" },
+  { id: 2, name: "À propos", href: "/about" },
+  { id: 3, name: "Contact", href: "/contact" }
+];
+---
+
+<footer class="rounded-lg shadow m-4">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <a
+          href="https://flowbite.com/"
+          class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+        >
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            Flowbite
+          </span>
+        </a>
+        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+          {items.map((item) => (
+            <li>
+              <a href={item.href} class="text-xl text-white font-semibold hover:underline me-4 md:me-6">
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="flex mt-6 justify-between items-center">
+      <span class="text-lg text-gray-500 dark:text-gray-400">
+        © 2023
+        <a href="https://flowbite.com/" class="hover:underline">
+          Flowbite™
+        </a>
+        . All Rights Reserved.
+      </span>
+      <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+        <li>
+          <a href="#" class="text-xl text-white font-semibold hover:underline me-4 md:me-6">
+            Term of use
+          </a>
+        </li>
+        <li>
+          <a href="#" class=" text-xl text-white font-semibold hover:underline me-4 md:me-6">
+            Privacy policy
+          </a>
+        </li>
+      </ul>
+      </div>
+    </div>
+  </footer>
