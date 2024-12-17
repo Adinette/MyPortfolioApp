@@ -45,7 +45,7 @@ export const skills: Item[] = [
     { id: 18, img: swagger },
 ];
 ---
-<section class="p-6" id="skills">
+<section class="mt-10" id="skills">
     <div class="container max-w-5xl p-4 mx-auto text-center">
       <h2 class="text-5xl font-bold leading-none  sm:text-7xl">
         My Skills
@@ -54,7 +54,7 @@ export const skills: Item[] = [
     <div class="container mt-8 max-w-5xl flex flex-wrap justify-center mx-auto dark:text-gray-600">
       {skills.map((item: any) => (
         <div class="flex justify-center w-1/2 p-6 align-middle md:w-1/3 xl:w-1/4">
-          <Image src={item.img} alt="dot" width="100" height="100" class="" />
+          <Image src={item.img} alt="dot" width="100" height="100" class="hover:scale-150 duration-300" />
         </div>
       ))}
     </div>
