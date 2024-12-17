@@ -9,7 +9,6 @@ export const items: Item[] = [
   { id: 1, name: "About", href: "#about" },
   { id: 2, name: "My skills", href: "#skills" },
   { id: 3, name: "My projects", href: "#projects" },
-  { id: 4, name: "Contact", href: "#contact" }
 ];
 ---
 <nav class="pt-4 fixed w-full z-20 top-0 start-0 ">
@@ -23,12 +22,12 @@ export const items: Item[] = [
 		</span>
 	  </a>
 	  <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-		<button
+		<a href="#contact"
 		  type="button"
 		  class="text-white bg-fuchsia-600 hover:bg-fuchsia-600 focus:ring-4 focus:outline-none focus:ring-fuchsia-300 font-semibold rounded-full xl:text-xl md:text-md px-8 py-3 text-center dark:bg-fuschia-900 dark:hover:bg-fuschia-900 dark:focus:ring-fuschia-900"
 		>
 		  Contact me
-		</button>
+		</a>
 		<button
 		  data-collapse-toggle="navbar-sticky"
 		  type="button"
