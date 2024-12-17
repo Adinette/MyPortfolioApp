@@ -1,4 +1,11 @@
 ---
+import { Image } from "astro:assets";
+import dot from "../assets/dot.svg";
+import linkedin from "../assets/linkedin.svg";
+import instagram from "../assets/instagram.svg";
+import facebook from "../assets/facebook.svg";
+import git from "../assets/git.svg";
+
 export interface Item {
   id: number;
   name: string;
@@ -9,7 +16,7 @@ export const items: Item[] = [
   { id: 1, name: "About", href: "#about" },
   { id: 2, name: "My skills", href: "#skills" },
   { id: 3, name: "My projects", href: "#projects" },
-  { id: 4, name: "Contact", href: "#contact" }
+  { id: 4, name: "Contact", href: "#contact" },
 ];
 ---
 
@@ -20,32 +27,40 @@ export const items: Item[] = [
     <div>
       <h2 class="text-5xl font-bold leading-none sm:text-8xl">Follow me</h2>
       <div class="flex">
-        {[...Array(8)].map(() => <img src="src/assets/dot.svg" alt="dot" />)}
+        {
+          [...Array(8)].map(() => (
+            <Image src={dot} alt="dot" width="50" height="50" />
+          ))
+        }
       </div>
     </div>
     <div
       class="container max-w-6xl grid grid-cols-4 gap-4 m-auto md:grid-cols-4 xl:grid-cols-4"
     >
-      <div
+      <a
+        href="https://www.linkedin.com/in/adinette-dougloui-768259269/"
         class="flex justify-center items-center w-20 h-20 md:w-24 md:h-24 xl:w-24 xl:h-24 rounded-full bg-fuchsia-600"
       >
-        <img src="src/assets/linkedin.svg" alt="linkedin" />
-      </div>
-      <div
+        <Image src={linkedin} alt="linkedin" width="50" height="50" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/adinette-dougloui-768259269/"
         class="flex justify-center items-center w-20 h-20 md:w-24 md:h-24 xl:w-24 xl:h-24 rounded-full bg-fuchsia-600"
       >
-        <img src="src/assets/instagram.svg" alt="instagram" />
-      </div>
-      <div
+        <Image src={instagram} alt="instagram" width="50" height="50" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/adinette-dougloui-768259269/"
         class="flex justify-center items-center w-20 h-20 md:w-24 md:h-24 xl:w-24 xl:h-24 rounded-full bg-fuchsia-600"
       >
-        <img src="src/assets/facebook.svg" alt="facebook" />
-      </div>
-      <div
+        <Image src={facebook} alt="facebook" width="50" height="50" />
+      </a>
+      <a
+        href="https://github.com/Adinette"
         class="flex justify-center items-center w-20 h-20 md:w-24 md:h-24 xl:w-24 xl:h-24 rounded-full bg-fuchsia-600"
       >
-        <img src="src/assets/git.svg" alt="git" />
-      </div>
+        <Image src={git} alt="git" width="50" height="50" />
+      </a>
     </div>
   </div>
 </section>

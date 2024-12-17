@@ -1,8 +1,10 @@
 ---
+import { Image } from 'astro:assets';
+import projectImage from '../assets/project.jpg';
 export interface Item {
   id: number;
   name:string;
-  img: string;
+  img: any;
   date:string;
   description:string;
 }
@@ -11,28 +13,28 @@ export const project: Item[] = [
     {
       id: 1,
       name: "Project Name 1",
-      img: "src/assets/project.jpg",
+      img: projectImage,
       date: "Date 2021",
       description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Repellat, excepturi. Lorem ipsum dolor sit amet consectetur,adipisicing elit. Repellat, excepturi."
     },
     {
       id: 2,
       name: "Project Name 2",
-      img: "src/assets/project.jpg",
+      img: projectImage,
       date: "Date 2022",
       description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Repellat, excepturi. Lorem ipsum dolor sit amet consectetur,adipisicing elit. Repellat, excepturi."
     },
     {
       id: 3,
       name: "Project Name 3",
-      img: "src/assets/project.jpg",
+      img: projectImage,
       date: "Date 2023",
       description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Repellat, excepturi. Lorem ipsum dolor sit amet consectetur,adipisicing elit. Repellat, excepturi."
     },
     {
       id: 4,
       name: "Project Name 4",
-      img: "src/assets/project.jpg",
+      img: projectImage,
       date: "Date 2024",
       description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Repellat, excepturi. Lorem ipsum dolor sit amet consectetur,adipisicing elit. Repellat, excepturi."
     },
@@ -50,9 +52,11 @@ export const project: Item[] = [
         {project.map((item) => (
         <div class="shadow-xl rounded-2xl border-2 border-solid border-white hover:border-none hover:bg-gray-600">
             <div class="space-y-2">
-              <img
+              <Image
                 src={item.img}
                 alt=""
+                width="500"
+                height="500"
                 class="object-contain w-full rounded-tl-2xl rounded-tr-2xl"
               />
             </div>

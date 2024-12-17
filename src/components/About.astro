@@ -1,14 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import aboutImage from '../assets/about.jpg';
+---
 
 <div class="container flex flex-col justify-center mx-auto lg:flex-row lg:relative md:relative xl:relative" id="about">
     <div class="xl:flex xl:items-center xl:justify-center block p-6 mt-8 lg:mt-0">
       <h2 class="xl:absolute md:absolute xl:top-32 xl:left-1/2 md:top-32 md:left-80 xl:transform xl:-translate-x-1/2 text-5xl font-bold leading-none sm:text-7xl">
         About me
       </h2>
-      <img
-      src="src/assets/about.jpg"
-      alt=""
-        class="object-contain rounded-full"
-      />
+      <Image src={aboutImage} alt="" width="600" height="600" class="object-contain rounded-full" />
     </div>
     <div class="flex flex-col justify-center p-6 md:mt-8 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left lg:my-auto">
       <p class="mb-8 text-lg sm:mb-12 xl:mt-28">
